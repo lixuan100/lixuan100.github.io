@@ -1,0 +1,462 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 37, 58);
+    color: #ededed;
+}
+
+/* rgb(125, 199, 241) */
+/*  This is to set the general class header format for header1 */
+
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/*  Under header1 is "Li Xuan.", but because I want to change specifically Li Xuan only,
+ I need to set "Logo" which is the reference link for the words," Li Xuan." */
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover ,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home {
+    height:100vh ;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+.home-content h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: #00abf0;
+    border: 3px solid #00abf0;
+    border-radius: 300px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden; /* important for ::before effect */
+    z-index: 1;
+}
+
+/* This is for "Hire Me" */
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+/* This is for "Let's talk" */
+.btn-box a:nth-child(2):hover {
+    color: rgb(0, 37, 58);
+}
+
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+
+
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 37, 58);
+    border-radius: 300px;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+
+
+.home-content {
+  display: flex;
+  align-items: center;  /* or center if you want vertical centering */
+  justify-content: space-between;
+  width: 120%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.layout-box {
+  width: 100%;
+  padding-right: 2px;
+}
+
+.model-container {
+  position: relative;
+  width: 150%;
+  height: 500px;
+  padding-right: 1px;
+}
+
+model-viewer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%; /* Adjust this to fit the right side */
+  height: 120%;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  position: center;
+  width: 100%;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.update-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #00abf0;
+  transition: width 0.3s ease;
+}
+
+.hide {
+  display: none;
+}
+
+/* AR Button */
+#play {
+    position: absolute; /* Changed from relative */
+    bottom: 10px;        /* Push it to the bottom of container */
+    left: 20%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:transparent;
+    border: 3px solid #ffffff;
+    border-radius: 300px;
+    
+    color: #00abf0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#play:hover {
+  background:#ffffff;
+  color: #00abf0;
+  transition: all .8s ease;
+}
+
+
+.Hotspot {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: #00abf0;
+    border: 3px solid #00abf0;
+    border-radius: 300px;
+    color: rgb(0, 37, 58);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden; /* important for ::before effect */
+    z-index: 1;
+    }
+
+
+#pause {
+    position: absolute; /* Changed from relative */
+    bottom: 10px;        /* Push it to the bottom of container */
+    left: 50%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:transparent;
+    border: 3px solid #ffffff;
+    border-radius: 300px;
+    
+    color: #00abf0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#pause:hover {
+  background:#ffffff;
+  color: #00abf0;
+  transition: all .8s ease;
+}
+
+
+#Top{
+    position: absolute; /* Changed from relative */
+    top: 60px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:rgb(92, 157, 243);
+    border: 3px solid rgb(92, 157, 243);
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#Top:hover {
+  background:transparent;
+  color: #00abf0;
+  transition: all .5s ease;
+}
+
+
+#Right{
+    position: absolute; /* Changed from relative */
+    top: 120px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:rgb(92, 157, 243);
+    border: 3px solid rgb(92, 157, 243);
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#Right:hover {
+  background:transparent;
+  color: #00abf0;
+  transition: all .5s ease;
+}
+
+
+#Front{
+    position: absolute; /* Changed from relative */
+    top: 180px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:rgb(92, 157, 243);
+    border: 3px solid rgb(92, 157, 243);
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#Front:hover {
+  background:transparent;
+  color: #00abf0;
+  transition: all .5s ease;
+}
+
+#M1{
+    position: absolute; /* Changed from relative */
+    bottom: 80px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:transparent;;
+    border: 3px solid #004cf0;;
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#M1:hover {
+  background:#004cf0;
+  transition: all .5s ease;
+}
+
+
+#M2{
+    position: absolute; /* Changed from relative */
+    bottom: 20px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:transparent;;
+    border: 3px solid #004cf0;;
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#M2:hover {
+  background:#004cf0;
+  transition: all .5s ease;
+}
+
+#Default{
+    position: absolute; /* Changed from relative */
+    bottom: 140px;        /* Push it to the bottom of container */
+    left: 80%;           /* Center horizontally */
+    transform: translateX(-50%); /* Align center */
+    font-size: 16px;
+      
+    width: 150px;
+    height: 50px; /* Use fixed height instead of % */
+    
+    background-color:transparent;;
+    border: 3px solid #004cf0;;
+    border-radius: 300px;
+    
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+    }
+
+
+#Default:hover {
+  background:#004cf0;
+  transition: all .5s ease;
+}
